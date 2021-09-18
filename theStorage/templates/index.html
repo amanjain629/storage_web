@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  {% block head %}
+    
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "montserrat",sans-serif;
+    }
+    body{
+        {% comment %} background-image: url(bg.jpg) {% endcomment %}
+        
+    }
+    .container1{
+        background: #333;
+        background-image: url(bg.jpg) no-repeat center;
+        background-size: cover;
+        padding: 100px 40px;
+        text-align: center;
+        color: white;
+    }
+    .container p {
+        max-width: 600px;
+        margin: 40px auto;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .email-box{
+        height: 40px;
+        justify-content: center;
+        display: flex; /*its better to use inline-flex*/
+    }
+    .email-box i{
+        background: #2f3542;
+        width: 40px;
+        line-height: 40px;
+    }
+    .tbox,.btn{
+        border: none;
+        outline: none;
+    }
+    .tbox{
+        width: 0px;
+        transition: 0.6s;
+    }
+    .email-box:hover > .tbox,.tbox:focus{
+        width: 260px;
+        padding: 0 10px;
+    }
+    .btn{
+        background: #2f3542;
+        color: white;
+        padding: 0 10px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .center-block {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    </style>
+  {% endblock head %}
+
+
+  {% block body %}
+  <div class="container1">
+    <form action="/postSubscriber/" method="post">
+    {% csrf_token %}
+      <h1>Keep up with what’s next</h1>
+      <p>Subscribe to our newsletter for future updates and apk.</p>
+      <div class="email-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16" style="padding-right:5px">
+          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+        </svg>
+        <input class="tbox" type="email" name="email" value="" placeholder="Enter your email" required>
+        <button class="btn" type="submit" name="button">Subscribe</button>
+      </div>
+    </form>
+  </div>
+  <br>
+
+
+  <section class="arbor-grid-container arbor-padding--none IndexPiscesRebrandPage__core-offerings-plank pisces-rebrand-quad-block__container pisces-rebrand-quad-block__container--background-color-desert-storm" style = "padding-left:55px; padding-right:40px;">
+  <div class="arbor-grid-container__usable-area arbor-grid-container__usable-area--standard-width arbor-direction--column arbor-direction--row--medium arbor-align--flex-start arbor-spacing--flex-start arbor-spacing--space-between--medium">
+  <div class="arbor-grid-element pisces-rebrand-block arbor-align--flex-start arbor-grid-element--width--1-1 arbor-grid-element--width--5-24--medium arbor-direction--column arbor-spacing--flex-start">
+  <div class="pisces-rebrand-block__image-container">
+  <img srcset="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/syncing-vfl5qmpJE.svg" alt="Store and sync your files with Dropbox" src="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/syncing-vfl5qmpJE.svg">
+  </div>
+  <h2 class="arbor-headline arbor-headline--22 arbor-headline--title-2 arbor-foreground-color--panda-black pisces-rebrand-block__headline">Get 5gb free storage</h2>
+  <p class="arbor-copy arbor-copy--standard arbor-foreground-color--panda-black pisces-rebrand-block__description">Use the 5gb free storage and then buy storage according to your needs.</p>
+  </div>
+  <div class="arbor-grid-element pisces-rebrand-block arbor-align--flex-start arbor-grid-element--width--1-1 arbor-grid-element--width--5-24--medium arbor-direction--column arbor-spacing--flex-start">
+  <div class="pisces-rebrand-block__image-container">
+  <img srcset="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/share-vfllC7nq_.svg" alt="Share any file with Dropbox" src="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/share-vfllC7nq_.svg">
+  </div>
+  <h2 class="arbor-headline arbor-headline--22 arbor-headline--title-2 arbor-foreground-color--panda-black pisces-rebrand-block__headline">Store</h2>
+  <p class="arbor-copy arbor-copy--standard arbor-foreground-color--panda-black pisces-rebrand-block__description">Store Your Images in the cloud with 24/7 access from any mobile device.</p>
+  </div>
+  <div class="arbor-grid-element pisces-rebrand-block arbor-align--flex-start arbor-grid-element--width--1-1 arbor-grid-element--width--5-24--medium arbor-direction--column arbor-spacing--flex-start">
+  <div class="pisces-rebrand-block__image-container">
+  <img srcset="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/shield-vflEXMD4H.svg" alt="Stay secure with Dropbox" src="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/shield-vflEXMD4H.svg">
+  </div>
+  <h2 class="arbor-headline arbor-headline--22 arbor-headline--title-2 arbor-foreground-color--panda-black pisces-rebrand-block__headline">Download</h2>
+  <p class="arbor-copy arbor-copy--standard arbor-foreground-color--panda-black pisces-rebrand-block__description">Download Your Images from the cloud with 24/7 access from any mobile device.</p>
+  </div>
+  <div class="arbor-grid-element pisces-rebrand-block arbor-align--flex-start arbor-grid-element--width--1-1 arbor-grid-element--width--5-24--medium arbor-direction--column arbor-spacing--flex-start">
+  <div class="pisces-rebrand-block__image-container">
+  <img srcset="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/comment-vflqWafTI.svg" alt="Collaborate with Dropbox" src="https://cfl.dropboxstatic.com/static/images/index/pisces/quad/comment-vflqWafTI.svg">
+  </div>
+  <h2 class="arbor-headline arbor-headline--22 arbor-headline--title-2 arbor-foreground-color--panda-black pisces-rebrand-block__headline">Efficient Image Classification Algorithm</h2>
+  <p class="arbor-copy arbor-copy--standard arbor-foreground-color--panda-black pisces-rebrand-block__description">Now Find your Personal Images in a different area with the automated Image Classification Algorithm.</p>
+  </div>
+  </div>
+  </section>
+
+  <br><br><br>
+
+  <div class="accordion" id="accordionExample" style="padding-left:23px; padding-right:21px;">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <b>Smart File Segregation</b>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>No more creating folders manually, Now find Similar files/Images in one place.</strong> 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <b>Smart File Search</b>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Having a hard time in searching Images or Files?<br>Having a difficulty in finding a 6 month old file?</strong><br> Don't worry! We've got your back. Coming up with a Smart File Search Feature that lets you search any file in no time.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <b>Auto Archieve Feature</b>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Tired of deleting unwanted Images and cleaning your storage?</strong><br> Don't worry here too, We've got everything you need with the auto Archieve Feature.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <b>File Version Control</b>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Automated Segregation of different versions of a file that lets you delete the depreciated files.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<div class="container1">
+  <h1>Feedback Form</h1><br>
+  <form method="post" action="/postFeedback/">
+  {% csrf_token %}
+    <div class="mb-3 col-lg-4 center-block">
+      <label for="exampleFormControlInput1" class="form-label">Name</label>
+      <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name">
+    </div>
+    <div class="mb-3 col-lg-4 center-block">
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input name="mail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
+    </div>
+    <div class="mb-3 col-lg-4 center-block">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea name="feedback" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="mb-3 col-lg-4 center-block">
+      <button type="submit" name="button" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</div>
+
+
+
+  {% endblock body %}
+</html>
