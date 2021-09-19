@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -73,7 +75,7 @@
     <form action="/postSubscriber/" method="post">
     {% csrf_token %}
       <h1>Keep up with what’s next</h1>
-      <p>Subscribe to our newsletter for future updates and apk.</p>
+      <p>Become the first users of our app by subscribing below.</p>
       <div class="email-box">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16" style="padding-right:5px">
           <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
@@ -174,7 +176,7 @@
 
 <br><br>
 <div class="container1">
-  <h1>Feedback Form</h1><br>
+  <h1>Feedback/Suggestion/Requirements Form</h1><br>
   <form method="post" action="/postFeedback/">
   {% csrf_token %}
     <div class="mb-3 col-lg-4 center-block">
@@ -186,15 +188,14 @@
       <input name="mail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
     </div>
     <div class="mb-3 col-lg-4 center-block">
-      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-      <textarea name="feedback" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <label for="exampleFormControlTextarea1" class="form-label">Feedback/Suggestion/Requirements</label>
+      <textarea name="feedback" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your Feedback/Suggestion/Requirements"></textarea>
     </div>
     <div class="mb-3 col-lg-4 center-block">
       <button type="submit" name="button" class="btn btn-primary">Submit</button>
     </div>
 </form>
 </div>
-
 
 
   {% endblock body %}

@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'e(o$=z)0$$sffyf)+_vy!y7s(j&qt5*bcb$l^&$%@18l2+4+e+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['storagenew.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['storagenew.herokuapp.com','127.0.0.1','www.ar-cloud.in','ar-cloud.in']
 
 
 # Application definition
@@ -122,6 +122,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'theStorage/static')
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'theStorage/staticfiles')
 STATIC_URL = '/static/'
