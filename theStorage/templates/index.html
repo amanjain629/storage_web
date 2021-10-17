@@ -17,6 +17,34 @@
         {% comment %} background-image: url(bg.jpg) {% endcomment %}
         
     }
+    .resp-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+    }
+
+    .resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 80%;
+      border: 0;
+      display: block
+    }
+
+    .your-centered-div {
+      width: 560px;
+      height: 315px;
+
+      position: absolute;
+      top: 0; 
+      right: 0;
+      bottom: 0; 
+      left: 0;
+      margin: auto;
+    }
+
     .container1{
         background: #333;
         background-image: url(bg.jpg) no-repeat center;
@@ -24,6 +52,16 @@
         padding: 100px 40px;
         text-align: center;
         color: white;
+    }
+
+    .mdi-36px {
+        font-size: 39px;
+        margin-right: 10px
+    }
+
+    .container2 {
+        margin-top: 75px;
+        align:center;
     }
     .container p {
         max-width: 600px;
@@ -67,6 +105,10 @@
     }
 
     </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   {% endblock head %}
 
 
@@ -87,6 +129,31 @@
   </div>
   <br>
 
+  <div class="resp-container">
+    <iframe class="resp-iframe" src="https://www.youtube.com/embed/dm7HchvF83A" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  {% comment %} <div class="your-centered-div">
+    <iframe src="https://www.youtube.com/embed/dm7HchvF83A" alt="" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+  </div> {% endcomment %}
+
+  {% comment %} <iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/dm7HchvF83A" frameborder="0" allowfullscreen></iframe> {% endcomment %}
+
+  <div class="page-content page-container" id="page-content">
+    <div class="padding" style="margin-left: 50px;">
+        <div class="row container2 d-flex justify-content-center">
+            <div class="template-demo mt-2">  
+            <a href="http://play.google.com/store/apps/details?id=com.ar.arcloud"><button class="btn btn-outline-dark btn-icon-text"> 
+            <i class="fa fa-android btn-icon-prepend mdi-36px"></i> 
+            <span class="d-inline-block text-left"> 
+            <small class="font-weight-light d-block">Get it on the</small> Google Play 
+            </span> 
+            </button></a>
+            </div>
+        </div>
+    </div>
+ </div>
+ <br><br><br>
 
   <section class="arbor-grid-container arbor-padding--none IndexPiscesRebrandPage__core-offerings-plank pisces-rebrand-quad-block__container pisces-rebrand-quad-block__container--background-color-desert-storm" style = "padding-left:55px; padding-right:40px;">
   <div class="arbor-grid-container__usable-area arbor-grid-container__usable-area--standard-width arbor-direction--column arbor-direction--row--medium arbor-align--flex-start arbor-spacing--flex-start arbor-spacing--space-between--medium">
@@ -176,7 +243,8 @@
 
 <br><br>
 <div class="container1">
-  <h1>Feedback/Suggestion/Requirements Form</h1><br>
+  <h1>Feedback/</h1>
+  <h1>Requirements Form</h1><br>
   <form method="post" action="/postFeedback/">
   {% csrf_token %}
     <div class="mb-3 col-lg-4 center-block">
